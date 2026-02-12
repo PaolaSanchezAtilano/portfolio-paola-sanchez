@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio | Paola</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a class="brand" href="#top">
+          <img src="asset/img/logo_Paola.png" alt="Logo Paola Sánchez" class="brand-logo">
+        </a>
+
+        <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div id="navLinks" class="nav-links">
+          <a href="#about">Sobre mí</a>
+          <a href="#featured">Destacados</a>
+          <a href="#more">Más proyectos</a>
+          <a href="#experience">Experiencia</a>
+          <a href="#education">Educación</a>
+          <a href="#certs">Cursos</a>
+          <a href="#contact">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="section container reveal" id="about">
+        <div class="section-head">
+          <div>
+            <h1>Paola Montserrat Sánchez Atilano</h1>
+          </div>
+
+          <div class="about-actions">
+            <a class="btn primary" href="#featured">Ver destacados</a>
+            <a class="btn ghost" href="asset/cv/CV.pdf" download>Descargar CV (PDF)</a>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel about-card">
+            <div class="about-top">
+              <img class="about-avatar" src="asset/img/Foto.png" alt="Foto de Paola" loading="lazy" />
+
+              <div class="about-text">
+                <h3>Sobre mí</h3>
+                <p id="aboutBio" class="muted"></p>
+
+                <div class="chips" id="aboutChips"></div>
+
+                <div class="quick-contacts">
+                  <a class="icon-btn" id="btnWhats" href="#" target="_blank" rel="noreferrer">
+                    <span class="dot"></span> WhatsApp
+                  </a>
+                  <a class="icon-btn" id="btnMail" href="#">
+                    <span class="dot"></span> Correo
+                  </a>
+                  <a class="icon-btn" id="btnLinked" href="#" target="_blank" rel="noreferrer">
+                    <span class="dot"></span> LinkedIn
+                  </a>
+                </div>
+                <div class="skills-box" id="skillsBox">
+                <h4>Skills adicionales</h4>
+                <div class="skills-strip" aria-label="Skills">
+        
+
+                  <div id="skillsIcons" class="skills-icons"></div>
+                </div>
+
+                </div>
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container reveal" id="featured">
+        <div class="section-head">
+          <div>
+            <h2>Proyectos destacados</h2>
+            <p class="muted">Da clic para ver detalles completos en un modal.</p>
+          </div>
+
+          <div class="toolbar">
+            <input id="featuredSearch" class="input" type="text" placeholder="Buscar destacado..." />
+          </div>
+        </div>
+
+        <div id="featuredGrid" class="grid"></div>
+      </section>
+
+      <section class="section container reveal" id="more">
+        <div class="section-head">
+          <div>
+            <h2>Más proyectos</h2>
+            <p class="muted">Proyectos del curso (con o sin imagen). También abren modal.</p>
+          </div>
+
+          <div class="toolbar">
+            <input id="moreSearch" class="input" type="text" placeholder="Buscar proyecto..." />
+            <select id="moreFilter" class="input">
+              <option value="all">Todos</option>
+              <option value="course">Curso</option>
+              <option value="case-study">Caso de estudio</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="moreGrid" class="grid"></div>
+      </section>
+
+      <section class="section container reveal" id="experience">
+        <div class="section-head">
+          <div>
+            <h2>Experiencia laboral</h2>
+            <p class="muted">Experiencia profesional y programas de formación.</p>
+          </div>
+        </div>
+
+        <div id="experienceList" class="about-grid"></div>
+      </section>
+
+      <section class="section container reveal" id="education">
+        <div class="section-head">
+          <div>
+            <h2>Educación</h2>
+            <p class="muted">Formación académica.</p>
+          </div>
+        </div>
+
+        <div id="educationList" class="about-grid"></div>
+      </section>
+
+      <section class="section container reveal" id="certs">
+        <div class="section-head">
+          <div>
+            <h2>Cursos y certificados</h2>
+            <p class="muted">Cursos y constancias (del curso y adicionales).</p>
+          </div>
+        </div>
+
+        <div id="certsList" class="about-grid"></div>
+      </section>
+
+      <section class="section container reveal" id="contact">
+        <div class="section-head">
+          <div>
+            <h2>Contacto</h2>
+            <p class="muted">Escríbeme por WhatsApp o correo. También puedes ver mi LinkedIn.</p>
+          </div>
+        </div>
+
+        <div class="contact-cards">
+          <a class="contact-card" id="cardWhats" href="#" target="_blank" rel="noreferrer">
+            <h3>WhatsApp</h3>
+            <p>Escribir directo</p>
+          </a>
+
+          <a class="contact-card" id="cardMail" href="#">
+            <h3>Correo</h3>
+            <p>Enviar email</p>
+          </a>
+
+          <a class="contact-card" id="cardLinked" href="#" target="_blank" rel="noreferrer">
+            <h3>LinkedIn</h3>
+            <p>Ver perfil</p>
+          </a>
+
+          <a class="contact-card" href="asset/cv/CV.pdf" download>
+            <h3>CV (PDF)</h3>
+            <p>Descargar</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <small>© <span id="year"></span> Paola — Portafolio</small>
+    </footer>
+
+    <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-left">
+          <div class="modal-media" id="modalMedia"></div>
+        </div>
+
+        <div class="modal-right" id="modalScroll">
+          <div class="modal-topbar">
+            <div class="modal-topbar-left">
+              <h3 id="modalTitle"></h3>
+              <p id="modalClient" class="modal-client"></p>
+             
+            </div>
+
+            <button id="modalCloseBtn" class="modal-close" aria-label="Cerrar">✕</button>
+          </div>
+
+          <div class="modal-body">
+            <p id="modalDesc" class="modal-desc"></p>
+
+            <div class="notice" id="modalNotice" hidden></div>
+
+            <div class="modal-meta">
+              <div>
+                <h4>Rol</h4>
+                <p id="modalRole"></p>
+              </div>
+              <div>
+                <h4>Tecnologías</h4>
+                <div id="modalTech" class="tech"></div>
+              </div>
+            </div>
+
+            <div>
+              <h4>Qué se hizo</h4>
+              <ul id="modalHighlights" class="highlights"></ul>
+            </div>
+
+            <div class="modal-actions" id="modalActions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script src="contact-links.js"></script>
+  </body>
+</html>
