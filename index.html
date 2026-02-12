@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portafolio | Paola</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
     <header class="header">
       <nav class="nav container">
         <a class="brand" href="#top">
-          <img src="asset/img/logo_Paola.png" alt="Logo Paola Sánchez" class="brand-logo">
+          <img
+            src="./asset/img/logo_Paola.png"
+            alt="Logo Paola Sánchez"
+            class="brand-logo"
+          />
         </a>
 
-        <button id="menuBtn" class="menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
           <span></span><span></span><span></span>
         </button>
 
@@ -41,14 +53,21 @@
 
           <div class="about-actions">
             <a class="btn primary" href="#featured">Ver destacados</a>
-            <a class="btn ghost" href="asset/cv/CV.pdf" download>Descargar CV (PDF)</a>
+            <a class="btn ghost" href="./asset/cv/CV.pdf" download
+              >Descargar CV (PDF)</a
+            >
           </div>
         </div>
 
         <div class="about-grid">
           <article class="panel about-card">
             <div class="about-top">
-              <img class="about-avatar" src="asset/img/Foto.png" alt="Foto de Paola" loading="lazy" />
+              <img
+                class="about-avatar"
+                src="./asset/img/Foto.png"
+                alt="Foto de Paola"
+                loading="lazy"
+              />
 
               <div class="about-text">
                 <h3>Sobre mí</h3>
@@ -57,26 +76,35 @@
                 <div class="chips" id="aboutChips"></div>
 
                 <div class="quick-contacts">
-                  <a class="icon-btn" id="btnWhats" href="#" target="_blank" rel="noreferrer">
+                  <a
+                    class="icon-btn"
+                    id="btnWhats"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <span class="dot"></span> WhatsApp
                   </a>
                   <a class="icon-btn" id="btnMail" href="#">
                     <span class="dot"></span> Correo
                   </a>
-                  <a class="icon-btn" id="btnLinked" href="#" target="_blank" rel="noreferrer">
+                  <a
+                    class="icon-btn"
+                    id="btnLinked"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <span class="dot"></span> LinkedIn
                   </a>
                 </div>
+
                 <div class="skills-box" id="skillsBox">
-                <h4>Skills adicionales</h4>
-                <div class="skills-strip" aria-label="Skills">
-        
-
-                  <div id="skillsIcons" class="skills-icons"></div>
+                  <h4>Skills adicionales</h4>
+                  <div class="skills-strip" aria-label="Skills">
+                    <div id="skillsIcons" class="skills-icons"></div>
+                  </div>
                 </div>
-
-                </div>
-
               </div>
             </div>
           </article>
@@ -91,7 +119,12 @@
           </div>
 
           <div class="toolbar">
-            <input id="featuredSearch" class="input" type="text" placeholder="Buscar destacado..." />
+            <input
+              id="featuredSearch"
+              class="input"
+              type="text"
+              placeholder="Buscar destacado..."
+            />
           </div>
         </div>
 
@@ -102,11 +135,18 @@
         <div class="section-head">
           <div>
             <h2>Más proyectos</h2>
-            <p class="muted">Proyectos del curso (con o sin imagen). También abren modal.</p>
+            <p class="muted">
+              Proyectos del curso (con o sin imagen). También abren modal.
+            </p>
           </div>
 
           <div class="toolbar">
-            <input id="moreSearch" class="input" type="text" placeholder="Buscar proyecto..." />
+            <input
+              id="moreSearch"
+              class="input"
+              type="text"
+              placeholder="Buscar proyecto..."
+            />
             <select id="moreFilter" class="input">
               <option value="all">Todos</option>
               <option value="course">Curso</option>
@@ -155,12 +195,20 @@
         <div class="section-head">
           <div>
             <h2>Contacto</h2>
-            <p class="muted">Escríbeme por WhatsApp o correo. También puedes ver mi LinkedIn.</p>
+            <p class="muted">
+              Escríbeme por WhatsApp o correo. También puedes ver mi LinkedIn.
+            </p>
           </div>
         </div>
 
         <div class="contact-cards">
-          <a class="contact-card" id="cardWhats" href="#" target="_blank" rel="noreferrer">
+          <a
+            class="contact-card"
+            id="cardWhats"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h3>WhatsApp</h3>
             <p>Escribir directo</p>
           </a>
@@ -170,12 +218,18 @@
             <p>Enviar email</p>
           </a>
 
-          <a class="contact-card" id="cardLinked" href="#" target="_blank" rel="noreferrer">
+          <a
+            class="contact-card"
+            id="cardLinked"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+          >
             <h3>LinkedIn</h3>
             <p>Ver perfil</p>
           </a>
 
-          <a class="contact-card" href="asset/cv/CV.pdf" download>
+          <a class="contact-card" href="./asset/cv/CV.pdf" download>
             <h3>CV (PDF)</h3>
             <p>Descargar</p>
           </a>
@@ -188,7 +242,12 @@
     </footer>
 
     <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
         <div class="modal-left">
           <div class="modal-media" id="modalMedia"></div>
         </div>
@@ -198,10 +257,11 @@
             <div class="modal-topbar-left">
               <h3 id="modalTitle"></h3>
               <p id="modalClient" class="modal-client"></p>
-             
             </div>
 
-            <button id="modalCloseBtn" class="modal-close" aria-label="Cerrar">✕</button>
+            <button id="modalCloseBtn" class="modal-close" aria-label="Cerrar">
+              ✕
+            </button>
           </div>
 
           <div class="modal-body">
@@ -231,8 +291,8 @@
       </div>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-    <script src="contact-links.js"></script>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+    <script src="./contact-links.js"></script>
   </body>
 </html>
