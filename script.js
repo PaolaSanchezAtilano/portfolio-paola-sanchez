@@ -78,7 +78,7 @@ function renderSkillsIcons(profile) {
 renderSkillsIcons(PROFILE);
 
 const waLink = `https://wa.me/${PROFILE?.whatsappPhone || ""}?text=${encodeURIComponent(
-  "Hola Paola, vi tu portafolio 🙂"
+  "Hola Paola, vi tu portafolio"
 )}`;
 
 const mailLink = `mailto:${PROFILE?.email || ""}?subject=${encodeURIComponent(
@@ -110,10 +110,7 @@ if (menuBtn && navLinks) {
 }
 
 const featuredGrid = $("featuredGrid");
-const featuredSearch = $("featuredSearch");
 const moreGrid = $("moreGrid");
-const moreSearch = $("moreSearch");
-const moreFilter = $("moreFilter");
 
 function projectCardHTML(p) {
   const hasMedia = !!p.media;
@@ -140,20 +137,10 @@ function projectCardHTML(p) {
 
 const allProjects = [...(featuredProjects || []), ...(moreProjects || [])];
 
-function renderGrid(gridEl, data, query, filter) {
+function renderGridNoFilters(gridEl, data) {
   if (!gridEl) return;
 
-  const q = (query || "").trim().toLowerCase();
-  const f = filter || "all";
-
-  const filtered = (data || []).filter((p) => {
-    const matchFilter = f === "all" ? true : p.type === f;
-    const blob = `${p.title} ${p.subtitle || ""} ${p.description || ""} ${p.role || ""}`.toLowerCase();
-    const matchSearch = q ? blob.includes(q) : true;
-    return matchFilter && matchSearch;
-  });
-
-  gridEl.innerHTML = filtered.map(projectCardHTML).join("");
+  gridEl.innerHTML = (data || []).map(projectCardHTML).join("");
 
   gridEl.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", () => openModal(card.dataset.id));
@@ -166,19 +153,8 @@ function renderGrid(gridEl, data, query, filter) {
   });
 }
 
-if (featuredSearch) {
-  featuredSearch.addEventListener("input", () => {
-    renderGrid(featuredGrid, featuredProjects, featuredSearch.value, "all");
-  });
-}
-renderGrid(featuredGrid, featuredProjects, "", "all");
-
-function rerenderMore() {
-  renderGrid(moreGrid, moreProjects, moreSearch?.value || "", moreFilter?.value || "all");
-}
-if (moreSearch) moreSearch.addEventListener("input", rerenderMore);
-if (moreFilter) moreFilter.addEventListener("change", rerenderMore);
-rerenderMore();
+renderGridNoFilters(featuredGrid, featuredProjects);
+renderGridNoFilters(moreGrid, moreProjects);
 
 const experienceList = $("experienceList");
 if (experienceList) {
@@ -280,7 +256,9 @@ function openModal(projectId) {
   if (modalTech) modalTech.innerHTML = buildTechIcons(p.tech);
 
   if (modalHighlights) {
-    modalHighlights.innerHTML = (p.highlights || []).map((h) => `<li>${escapeHtml(h)}</li>`).join("");
+    modalHighlights.innerHTML = (p.highlights || [])
+      .map((h) => `<li>${escapeHtml(h)}</li>`)
+      .join("");
   }
 
   if (modalNotice) {

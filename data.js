@@ -6,10 +6,11 @@ window.PORTFOLIO_DATA = {
     email: "paolasaenzat203@gmail.com",
     linkedin: "https://www.linkedin.com/in/paola-s%C3%A1nchez-atilano-a7578434b/",
     bio:
-      "Desarrolladora de software con experiencia en el diseño y desarrollo de soluciones web, participando tanto en frontend como backend. Ha trabajado con Laravel, Node.js y JavaScript, así como con bases de datos como PostgreSQL y Supabase.",
-    chips: ["Frontend", "Backend", "Laravel", "Node.js", "Proyectos reales"],
+      "Desarrolladora de software con experiencia en el diseño y desarrollo de soluciones web, participando tanto en frontend como backend. Ha trabajado con Laravel, Node.js y JavaScript, así como con bases de datos como PostgreSQL y Supabase. Actualmente amplía su perfil técnico con Python aplicado al análisis de datos, desarrollando experiencia práctica en exploración y visualización de información para la toma de decisiones.",
+    chips: ["Frontend", "Backend", "Laravel", "Node.js", "Proyectos reales", "Python para Análisis de Datos (en formación)"],
     skillsIcons: [
   { label: "JavaScript", icon: "devicon-javascript-plain" },
+  { label: "Python", icon: "devicon-python-plain" },
   { label: "Java", icon: "devicon-java-plain" },
   { label: "PHP", icon: "devicon-php-plain" },
 
@@ -25,8 +26,6 @@ window.PORTFOLIO_DATA = {
   { label: "GitHub", icon: "devicon-github-original" },
   { label: "Postman", icon: "devicon-postman-plain" },
 ],
-
-
   },
 
   featuredProjects: [
@@ -123,7 +122,7 @@ window.PORTFOLIO_DATA = {
       id: "stock-report-automation",
       type: "course",
       title: "Stock Report Automation",
-      subtitle: "Automatización en Python: análisis + gráfico + envío por correo",
+      subtitle: "Automatización en Python para análisis de datos, generación de reportes gráficos y envío automatizado por correo.",
       description:
         "Herramienta de automatización en Python que recupera datos del mercado usando yfinance (Yahoo Finance), calcula estadísticas (máximo, mínimo y promedio), genera una gráfica del precio y envía automáticamente un reporte por correo vía SMTP seguro.",
       role: "Desarrollo completo: integración API, análisis, visualización y envío de reportes.",
@@ -138,7 +137,7 @@ window.PORTFOLIO_DATA = {
       visibility: "public",
       media: {
         type: "image",
-        src: "asset/img/placeholder.jpg",
+        src: "asset/img/Stock Report Automation.png",
         alt: "Stock Report Automation",
       },
       links: {
@@ -147,53 +146,64 @@ window.PORTFOLIO_DATA = {
     },
 
     {
-      id: "data-analytics-dashboard",
-      type: "course",
-      title: "Dashboard de Análisis de Datos",
-      subtitle: "Proyecto en desarrollo (formación en curso)",
-      description:
-        "Dashboard para análisis de datos con enfoque en visualización, métricas y exploración. El objetivo es presentar resultados de forma clara mediante gráficas, filtros y KPIs.",
-      role: "Diseño y construcción del dashboard (en proceso).",
-      tech: [{ name: "Python", icon: "devicon-python-plain colored" }],
-      highlights: [
-        "Visualización de datos con gráficas.",
-        "Indicadores (KPIs) y métricas clave.",
-        "Filtros para explorar resultados.",
-        "Proyecto en construcción durante el curso.",
-      ],
-      visibility: "public",
-      media: {
-        type: "image",
-        src: "asset/img/placeholder.jpg",
-        alt: "Dashboard de análisis de datos",
-      },
-      links: {},
-    },
+  id: "retail-sales-data-analysis",
+  type: "course",
+  title: "Análisis de Datos de Ventas con Python",
+  subtitle: "Proyecto práctico de análisis y visualización de datos",
+  description:
+    "Proyecto de análisis exploratorio de datos (EDA) aplicado a ventas de una cadena de tiendas minoristas. Se transformaron datos crudos en información estratégica mediante agrupaciones, métricas clave y visualización interactiva para apoyar la toma de decisiones.",
+  role: "Análisis de datos, generación de insights de negocio y visualización interactiva.",
+  tech: [
+    { name: "Python", icon: "devicon-python-plain colored" },
+    { name: "Pandas", icon: "devicon-pandas-original colored" },
+    { name: "Plotly", icon: "devicon-plotly-plain colored" }
+  ],
+  highlights: [
+    "Carga y exploración de datos desde archivo Excel.",
+    "Generación de estadísticas descriptivas.",
+    "Agrupación y ranking de tiendas por facturación.",
+    "Identificación de la tienda con mayor y menor rendimiento.",
+    "Detección de la forma de pago más utilizada.",
+    "Visualización interactiva de ventas por tienda y método de pago."
+  ],
+  visibility: "public",
+  media: {
+    type: "image",
+    src: "asset/img/sales_data_analysis.png",
+    alt: "Análisis de ventas con visualización interactiva"
+  },
+  links: {
+    repo: "https://github.com/PaolaSanchezAtilano/Sales-Data-Analysis-for-Retail-Chain.git"
+  }
+},
 
     {
-      id: "ai-generation-project",
-      type: "course",
-      title: "Proyecto de Generación con IA",
-      subtitle: "Exploración de inteligencia artificial (por afinar)",
-      description:
-        "Proyecto enfocado en aplicar inteligencia artificial para generar resultados automáticamente (texto, análisis o contenido). Se documentará el enfoque, herramientas y el flujo general conforme avance el desarrollo.",
-      role: "Exploración e implementación inicial de IA (por definir).",
-      tech: [{ name: "Python", icon: "devicon-python-plain colored" }],
-      highlights: [
-        "Uso de IA para generación automatizada.",
-        "Definición de flujo y objetivos del proyecto.",
-        "Mejoras y detalles por refinar conforme avance.",
-      ],
-      visibility: "public",
-      media: {
-        type: "image",
-        src: "asset/img/placeholder.jpg",
-        alt: "Proyecto de generación con IA",
-      },
-      links: {},
-    },
+  id: "ai-generation-project",
+  type: "course",
+  title: "Proyecto de Generación con Inteligencia Artificial",
+  subtitle: "Aplicación práctica de IA para generación automatizada",
+  description:
+    "Proyecto enfocado en aplicar modelos de inteligencia artificial para la generación automatizada de contenido y análisis. Se exploran conceptos fundamentales como prompts, flujo de procesamiento, estructuración de resultados y optimización de respuestas generadas por modelos de lenguaje.",
+  role: "Diseño del flujo de generación, experimentación con prompts y análisis de resultados.",
+  tech: [
+    { name: "Python", icon: "devicon-python-plain colored" }
   ],
-
+  highlights: [
+    "Exploración de modelos de lenguaje para generación automática de texto.",
+    "Diseño de prompts y ajuste de resultados generados.",
+    "Estructuración del flujo de entrada y salida de información.",
+    "Análisis del comportamiento del modelo ante distintos escenarios.",
+    "Proyecto en evolución con mejoras progresivas."
+  ],
+  visibility: "public",
+  media: {
+    type: "image",
+    src: "asset/img/placeholder.jpg",
+    alt: "Proyecto de generación con inteligencia artificial"
+  },
+  links: {}
+},
+  ],
   EXPERIENCE: [
     {
       role: "Desarrolladora Frontend (Estadía Profesional)",
