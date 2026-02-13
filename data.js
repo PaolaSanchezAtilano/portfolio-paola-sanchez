@@ -178,30 +178,34 @@ window.PORTFOLIO_DATA = {
 },
 
     {
-  id: "ai-generation-project",
+  id: "real-time-hand-gesture-recognition",
   type: "course",
-  title: "Proyecto de Generación con Inteligencia Artificial",
-  subtitle: "Aplicación práctica de IA para generación automatizada",
+  title: "Real-Time Hand Gesture Recognition System",
+  subtitle: "Sistema de reconocimiento de gestos con visión computacional",
   description:
-    "Proyecto enfocado en aplicar modelos de inteligencia artificial para la generación automatizada de contenido y análisis. Se exploran conceptos fundamentales como prompts, flujo de procesamiento, estructuración de resultados y optimización de respuestas generadas por modelos de lenguaje.",
-  role: "Diseño del flujo de generación, experimentación con prompts y análisis de resultados.",
+    "Aplicación desarrollada en Python que implementa un sistema de reconocimiento y clasificación de gestos manuales en tiempo real utilizando técnicas de visión computacional. El proyecto emplea modelos preentrenados de MediaPipe para detectar 21 puntos clave (landmarks) de la mano y, mediante lógica condicional, clasifica diferentes posturas como mano abierta, puño cerrado, signo de paz y pulgar arriba.",
+  role: "Implementación del sistema de detección de mano y clasificación de gestos utilizando modelos preentrenados de MediaPipe.",
   tech: [
-    { name: "Python", icon: "devicon-python-plain colored" }
+    { name: "Python", icon: "devicon-python-plain colored" },
+    { name: "OpenCV", icon: "devicon-opencv-plain colored" },
+    { name: "MediaPipe", icon: "devicon-google-plain colored" }
   ],
   highlights: [
-    "Exploración de modelos de lenguaje para generación automática de texto.",
-    "Diseño de prompts y ajuste de resultados generados.",
-    "Estructuración del flujo de entrada y salida de información.",
-    "Análisis del comportamiento del modelo ante distintos escenarios.",
-    "Proyecto en evolución con mejoras progresivas."
+    "Detección de mano en tiempo real mediante cámara web.",
+    "Identificación de 21 landmarks por mano usando MediaPipe.",
+    "Clasificación de gestos mediante análisis de la posición de los dedos.",
+    "Visualización dinámica del gesto detectado en pantalla.",
+    "Aplicación práctica de modelos de Inteligencia Artificial preentrenados."
   ],
   visibility: "public",
   media: {
     type: "image",
-    src: "asset/img/placeholder.jpg",
-    alt: "Proyecto de generación con inteligencia artificial"
+    src: "asset/img/hand_gesture_recognition.jpeg",
+    alt: "Sistema de reconocimiento de gestos en tiempo real"
   },
-  links: {}
+  links: {
+    repo: "https://github.com/PaolaSanchezAtilano/Real-Time-Hand-Gesture-Recognition-System.git"
+  }
 },
   ],
   EXPERIENCE: [
