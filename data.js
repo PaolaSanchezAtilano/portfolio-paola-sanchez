@@ -257,7 +257,7 @@ window.PORTFOLIO_DATA = {
       type: "diploma",
     },
     {
-      title: "Curso de Python",
+      title: "Semana de Python en la Práctica (Curso Intensivo)",
       year: "2026",
       institution: "Daxus",
       type: "curso",
