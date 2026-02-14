@@ -35,6 +35,29 @@ body{
 
 a{ color:inherit; text-decoration:none; }
 
+p,
+.subtitle,
+.card-sub,
+.notice,
+.modal-desc,
+.modal-meta p,
+.contact-card p,
+.section-head p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.list,
+.highlights{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-top > div{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .container{ width:min(1320px, 94%); margin:0 auto; }
 
 .header{
