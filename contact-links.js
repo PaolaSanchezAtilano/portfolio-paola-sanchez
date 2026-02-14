@@ -37,13 +37,13 @@
     const tag = (el.tagName || "").toLowerCase();
 
     const go = () => {
-      // Si hay fallback: intenta abrir mailto y si no se nota cambio, abre Gmail web
+      
       if (fallbackHref) {
         const before = document.visibilityState;
         window.location.href = href;
 
         setTimeout(() => {
-          // Si sigue visible, probablemente no abrió nada -> fallback
+          
           if (document.visibilityState === before) {
             window.open(fallbackHref, "_blank", "noopener,noreferrer");
           }
@@ -60,7 +60,7 @@
       el.removeAttribute("target");
       el.setAttribute("rel", "noopener");
       el.addEventListener("click", (e) => {
-        // Fuerza el comportamiento para que no quede muerto si mailto no está configurado
+       
         if (fallbackHref) {
           e.preventDefault();
           go();
@@ -87,8 +87,7 @@
   }
 
   if (email) {
-    // En móvil: mailto directo (abre app)
-    // En PC: intenta mailto; si no abre, fallback a Gmail web
+    
     const primaryMail = mailtoLink;
     const fallbackMail = isMobile() ? null : gmailLink;
 
